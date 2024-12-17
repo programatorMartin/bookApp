@@ -1,0 +1,82 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-title mode="md" class="ion-no-padding">
+      <ion-label>
+        <ion-text color="primary">Welcome</ion-text>
+        <p><ion-text color="dark"><strong>Martin K.</strong></ion-text></p>
+      </ion-label>
+    </ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/icon/logo.png" />
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+  <div class="bg_circle"></div>
+  <div class="bg_circle" style="top: 69vh; left: -3rem;"></div>
+  <div class="bg_circle2"></div>
+  <div class="bg_circle3"></div>
+  <div class="bg_circle2" style="top: 5vh; right: -3rem;"></div>
+  <div class="bg_book"></div>
+
+  <!-- Swiper Section -->
+  <div class="swiper-container">
+    <!-- Swiper Wrapper -->
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let book of topBooks">
+        <div class="card_details">
+          <ion-label>
+            <div class="acc-amt">{{ book.name }}</div>
+            <span>{{ book.author }}</span>
+          </ion-label>
+          <p class="exp">{{ book.genre }} | {{ book.year }}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <ion-list class="recently-added-books">
+    <div>
+      <ion-list-header>
+        <ion-label color="medium">Recently Added Books</ion-label>
+      </ion-list-header>
+  
+      <ion-item-group>
+        <ion-item-sliding *ngFor="let book of books">
+          <ion-item lines="full">
+            <ion-label>
+              <ion-text>{{book.name}}</ion-text>
+              <p>
+                <ion-text>
+                  {{book.author}} ({{book.year}})
+                </ion-text>
+              </p>
+            </ion-label>
+            <ion-text slot="end" color="primary">
+              {{book.genre}}
+            </ion-text>
+          </ion-item>
+  
+          <!-- Sliding Options -->
+          <ion-item-options side="end">
+            <ion-item-option color="danger" (click)="removeBook(book)">
+              <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-item-group>
+  
+      <!-- Message when there are no books -->
+      <ng-template #noBooksMessage>
+        <ion-item>
+          <ion-label>No books available.</ion-label>
+        </ion-item>
+      </ng-template>
+    </div>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,13 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab()">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon [name]="selectedTab == 'home' ? 'book' : 'book-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="bookadd">
+      <ion-icon [name]="selectedTab == 'bookadd' ? 'add-circle' : 'add-circle-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="settings">
+      <ion-icon [name]="selectedTab == 'settings' ? 'settings' : 'settings-outline'"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

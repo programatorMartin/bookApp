@@ -1,0 +1,157 @@
+ion-content {
+  .bg_circle {
+    position: absolute;
+    width: 33vh;
+    height: 33vh;
+    left: -8rem;
+    top: 7vh;
+    border-radius: 50%;
+    background: rgba(250, 175, 15, 0.897);
+}
+
+  .bg_circle2 {
+    position: absolute;
+    width: 19vh;
+    height: 19vh;
+    right: -3rem;
+    top: 45vh;
+    border-radius: 50%;
+    background: rgba(250, 175, 15, 0.897);
+  }
+
+  .bg_circle3 {
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+    right: 13rem;
+    top: 45vh;
+    border-radius: 50%;
+    background: rgba(250, 175, 15, 0.897);
+  }
+
+
+  ion-row {
+    margin: 5vh 1rem 6vh 1rem;
+  }
+
+  .swiper-container {
+    position: relative;
+    height: 37vh; // Apply height to the swiper container
+    padding: 0 0.7rem;
+    box-sizing: border-box;
+    .swiper-pagination {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .swiper-slide {
+      height: 32vh;
+      border-radius: 2.5rem;
+      padding: 0 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(30px);
+      border: 2px solid rgba(127, 212, 168, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card_details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+
+      img {
+        align-self: start;
+        width: 2.5rem;
+        margin: 2rem 0;
+      }
+
+      ion-label {
+        .acc-amt {
+          margin: 0.2rem 0;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        span {
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+      }
+
+      p.exp {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 2rem 0;
+      }
+    }
+
+    
+  }
+
+  ion-list.recently-added-books {
+    border-radius: 2vh 2vh 0 0;
+    background: var(--ion-color-secondary);
+    padding-bottom: 50vh;
+    ion-list-header {
+      width: 100%;
+      text-align: center; /* Center text */
+      padding-inline-start: 0; /* Reset padding */
+      padding-inline-end: 0; /* Remove any additional padding */
+    }
+    ion-list-header, ion-item {
+        ion-label {
+            font-size: 1.1rem;
+        }
+    }
+
+      ion-item-group {
+        padding: 0 3.5vh;
+        ion-item {
+            font-weight: bold;
+            --background: transparent;
+            --border-style: dashed;
+            --border-color: var(--ion-color-tertiary);
+            --padding-bottom: 1rem;
+            --padding-top: 1rem;
+            --padding-start: 0;
+            ion-text[slot="end"] {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.9rem;
+                font-weight: normal;
+                margin-top: 3px;
+            }
+            ion-thumbnail {
+                height: 6vh;
+                width: 6vh;
+                border-radius: 10px;
+                background: var(--ion-color-white);
+                box-shadow: 0px 3px 6px rgb(3 181 170 / 4%);
+                img {
+                    height: 4vh;
+                    width: 4vh;
+                    transform: translateY(25%);
+                }
+            }
+        }
+      }
+    }
+
+    
+}
+
+
